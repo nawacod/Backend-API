@@ -6,10 +6,12 @@ import yfinance as yf
 import re
 
 app = FastAPI()
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://ai-market-analysiss.netlify.app" # Add your Netlify URL here
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
